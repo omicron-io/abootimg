@@ -1,7 +1,7 @@
 
 CPPFLAGS=-DHAS_BLKID
 CFLAGS=-O3 -Wall
-LDLIBS=-lblkid
+LDLIBS=-lblkid -luuid -static
 
 all: abootimg
 
