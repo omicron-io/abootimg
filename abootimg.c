@@ -296,18 +296,6 @@ int check_boot_img_header(t_abootimg* img)
     return 1;
   }
 
-<<<<<<< HEAD
-  if (!(img->header.ramdisk_size)) {
-    fprintf(stderr, "%s: ramdisk size is null\n", img->fname);
-    /*
-     * On newer AOSP devices, system can be used as rootfs,
-     * resulting in no initrd being used. Thus this case should
-     * not be fatal.
-     */
-  }
-
-=======
->>>>>>> 6bf683b... Fix support of Android boot images without ramdisk.
   unsigned page_size = img->header.page_size;
   if (!page_size) {
     fprintf(stderr, "%s: Image page size is null\n", img->fname);
